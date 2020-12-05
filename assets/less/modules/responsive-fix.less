@@ -1,0 +1,99 @@
+@media (max-width:991px) {
+  .navbar-toggle {
+    display: block;
+    margin: 7px 0 0;
+    box-shadow: none;
+    color: @white;
+    &:hover,
+    &:focus {
+      background: @red!important;
+    }
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: @white;
+  }
+  .navbar-collapse.collapse,
+  .rtl .navbar-collapse.collapse {
+    display: none!important;
+    border: 0;
+    box-shadow: none;
+  }
+  .navbar-nav,
+  .rtl .navbar-nav {
+    float: none!important;
+    .no-margin;
+    padding-top: 50px;
+  }
+  .navbar.navbar-default.main-nav {
+    .nav.navbar-nav {
+      .no-margin-right;
+      .margin-bottom-20;
+      padding-top: 0;
+      text-align: center;
+      li {
+        margin: 5px 0;
+        width: 100%;
+        display: block;
+        a {
+          padding: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .navbar-nav>li,
+  .rtl .navbar-nav>li {
+    float: none;
+    a {
+      padding: 10px 0;
+    }
+  }
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+}
+
+@media (max-width:767px) {
+  .media{
+    .media-left{
+      display: block;
+      float: none;
+      text-align: center;
+      padding: 0;
+      img{
+        margin: 0 auto 20px;
+      }
+    }
+    .media-body{
+      text-align: center;
+    }
+  }
+}
+
+
+@media (min-width: 1920px) {
+  #sidebar {
+    min-width: 30%;
+    max-width: 30%;
+    &.active{
+      left: -30%;
+    }
+  }
+  
+  
+  .chat-textarea{
+    &.active{
+      left: 31%;
+      width: 51.5%;
+    }
+  }
+  
+  .main-content{
+    &.active{
+      padding-left: 36%;
+    }
+  }
+    
+}
+
+@media (max-width:480px) {}

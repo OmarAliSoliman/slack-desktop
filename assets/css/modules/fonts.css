@@ -1,0 +1,14 @@
+/***********************
+Importing Fonts
+***********************/
+/* Regular */
+@font-face {
+  font-family: "Arabic.Naskh";
+  src: url('../fonts/ArbFONTS-Droid.Arabic.Naskh_.Regular_DownloadSoftware.iR_.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Arabic.Naskh";
+  src: url('../fonts/ArbFONTS-DroidNaskh-Bold.ttf') format('truetype');
+  font-weight: bold;
+}

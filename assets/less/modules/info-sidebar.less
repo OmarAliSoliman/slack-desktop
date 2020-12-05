@@ -1,0 +1,75 @@
+/*
+    DEMO STYLE
+*/
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+  min-width: 23%;
+  max-width: 23%;
+  transition: all 0.3s;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  height: 100%;
+  background: #fff;
+}
+
+#sidebar.active {
+    margin-left: -23%;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  h3{
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+  }
+  button{
+    background: transparent;
+  }
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -22%;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+
