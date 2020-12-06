@@ -277,7 +277,7 @@
 
 .fixed-date {
   position: fixed;
-  top:10%;
+  bottom: 20%;
   left: 53%;
   transform: translate(-50%, 0);
   text-align: center;
