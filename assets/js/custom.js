@@ -29,23 +29,22 @@ $(document).ready(function () {
   //   }
   // });
 
-  $(".date-divider").map(function (index, item) {
-    $(item).on("inview", function (event, isInView) {
-      if (isInView) {
-        // console.log("div is in view");
-        $(".fixed-date").fadeOut(1000);
-      } else {
-        $(".fixed-date").fadeIn("fast");
-      }
-    });
-  });
+  // $(".date-divider").map(function (index, item) {
+  //   $(item).on("inview", function (event, isInView) {
+  //     if (isInView) {
+  //       // console.log("div is in view");
+  //       $(".fixed-date").fadeOut(1000);
+  //     } else {
+  //       $(".fixed-date").fadeIn("fast");
+  //     }
+  //   });
+  // });
 
   // console.log($('.date-divider').last().offset().top)
   $(".chat-body").scroll(function () {
     $(".date-divider").map(function (index, item) {
       if ($(".fixed-date").offset().top >= $(item).offset().top) {
-        $(".fixed-date").text($(item).text());
-      } else {
+        $(".fixed-date").text($(item).text());  
       }
     });
   });
