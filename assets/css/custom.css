@@ -432,3 +432,8 @@
 #ResultsModal .modal-footer .pagination li a{
   border: 0 !important;
 }
+
+
+.prog-sidebar{
+  height: 100% !important;
+}
