@@ -41,7 +41,7 @@ $(document).ready(function () {
   // });
 
   // console.log($('.date-divider').last().offset().top)
-  $(".chat-body").scroll(function () {
+  $(".chat-body").on('scroll',function () {
     $(".date-divider").map(function (index, item) {
       if ($(".fixed-date").offset().top >= $(item).offset().top) {
         $(".fixed-date").text($(item).text());  
