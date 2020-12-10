@@ -277,15 +277,16 @@
 
 .fixed-date {
   position: fixed;
-  top: 10%;
+  top: 20%;
   left: 53%;
   transform: translate(-50%, 0);
   text-align: center;
-  width: 80px;
+  width: auto;
+  padding: 3px 20px;
   border-radius: 50px;
   background-color: #3F0E40;
   color: #fff;
-  height: 30px;
+  height: auto;
   line-height: 30px;
   font-size: 12px;
 }

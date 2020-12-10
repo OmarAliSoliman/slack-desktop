@@ -47,6 +47,12 @@ $(document).ready(function () {
   //   });
   // });
 
+  if($('.date-divider').length){
+    $('.fixed-date').css('display', 'block');
+  }else{
+    $('.fixed-date').css('display', 'none');
+  }
+
   // console.log($('.date-divider').last().offset().top)
   $(".chat-body").on('scroll',function () {
     $(".date-divider").map(function (index, item) {
