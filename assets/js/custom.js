@@ -53,6 +53,16 @@ $(document).ready(function () {
     $('.fixed-date').css('display', 'none');
   }
 
+  $('.chat-body').on('scroll', function(){
+    if(Math.floor($(".fixed-date").offset().top) <= $('.loadMore').offset().top){
+      $('.fixed-date').css('display', 'none');
+    }else{
+      $('.fixed-date').css('display', 'block')
+    }
+    // console.log($('.loadMore').offset().top);
+    // console.log(Math.floor($('.fixed-date').offset().top));
+  })
+
   // console.log($('.date-divider').last().offset().top)
   $(".chat-body").on('scroll',function () {
     $(".date-divider").map(function (index, item) {
