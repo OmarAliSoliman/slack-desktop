@@ -17,12 +17,12 @@
   <link rel="stylesheet" href="./assets/css/custome-admin.css">
 </head>
 
-<body  class="rtl">
+<body class="rtl">
 
 
   <button class="btn btn-block" data-toggle="modal" data-target="#searchMsgsModal" style='padding: 6px 60px;'><i
-      class="fa fa-search"></i> ابحث في الرسائل 
-    </button>
+      class="fa fa-search"></i> ابحث في الرسائل
+  </button>
 
   <!--Search msgs Modal-->
   <div class="modal fade group-modals" id="searchMsgsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -35,7 +35,7 @@
         </div>
         <div class="modal-body">
           <form method="POST" action="https://slack3.art4muslim.net/slack/channels/search" accept-charset="UTF-8"
-            id="SearchMsgsForm"><input name="_token" type="hidden" value="183TWv7SpMr8qbY5BZI6DGj4RZXOOlxqsVvF0pDJ">
+            id="SearchMsgsForm"><input name="_token" type="hidden" value="uTlFHeHYsO7kzucAaL9zmNPdT2L9uLVgmORzSExO">
 
             <div class="form-group has-feedback">
               <input type="text" autocomplete="on" class="form-control" id="keyword" name="keyword"
@@ -44,98 +44,106 @@
             </div>
             <div class='well'>
               <div class="form-group">
-                <h5 class="text-center mb-2 search-choose">خيارات البحث (اختياري)</h5>
+                <h5>خيارات البحث (اختياري)</h5>
               </div>
-              <div class="well-body">
-                <div class="">
-                  <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                      <div class="form-group">
-                        <label>
-                          <input type="radio" class="" name="search_channel_selection" value="all" checked="checked">
-                          في كل القنوات
-                        </label>
-                        <label>
-                          <input type="radio" class="" name="search_channel_selection" value="current">
-                          في القناة الحالية فقط ({{ channel_name }})
-                        </label>
-                      </div>
-                      <div class="form-group" style="margin-bottom: 5px;">
-                        <label>
-                          <input type="checkbox" class="" id="has_attachment" name="has_attachment[]" value="on">
-                          تحتوي على ملف مرفق
-        
-                        </label>
-                      </div>
-                      <div class="form-group" id="search_attachment_type_container" style="margin-top: 15px;display: none;">
-                        <label>
-                          حدد إن أردت نوع المرفق
-                        </label>
-                        <select class="search_attachment_type form-control" id="search_attachment_type" name="search_attachment_type"
-                        data-dir="rtl">
-                        <option value="all">غير محدد (كل أنواع الملفات)</option>
-                        <option value="pdf">بي دي اف</option>
-                        <option value="word">word</option>
-                        <option value="compressed">ملفات مضغوطة</option>
-                        <option value="image">صور</option>
-                        <option value="video">فيديو</option>
-                        <option value="audio">ملفات صوتية</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                      <div class="form-group search_users">
-                        <label>
-                          من العضو
-                        </label>
-                        <select class="js-example-basic-multiple form-control" id="search_msg_user" name="search_msg_user" data-dir="rtl">
-                          <option value="0" data-template-result="جميع الأعضاء">
-                            جميع الأعضاء
-                          </option>
-                          <option v-for="item in window.current_user_obj.concat(window.all_users) " :key="item.id"
-                            v-bind:value="item.id">
-                            {{ item.name }}
-                          </option>
-                        </select>
-                      </div>
+              <div class="form-group">
+                <label>
+                  <input type="radio" class="" name="search_channel_selection" value="all" checked="checked">
+                  في كل القنوات
+                </label>
+                <label>
+                  <input type="radio" class="" name="search_channel_selection" value="current">
+                  في القناة الحالية فقط ({{ channel_name }})
+                </label>
+              </div>
+              <div class="form-group" style="margin-bottom: 5px;">
+                <label>
+                  <input type="checkbox" class="" id="has_attachment" name="has_attachment[]" value="on">
+                  تحتوي على ملف مرفق
 
-                      <div class="form-group" id="search_date_picker_container">
-                        <label>
-                          حدد تاريخ إرسال الرسالة:
-                        </label>
-        
-                        <div class=''>
-                          <div class='text'>
-                            <div class=''>من</div>
-                          </div>
-                          <div>
-                            <div class="input-group date">
-                              <input type="text" class="form-control" name="search_from" id="search_from">
-                              <div class="input-group-addon" id="search_from_icon">
-                                <span class="glyphicon glyphicon-th"></span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class=' text'>
-                            <div class=''>إلى</div>
-                          </div>
-                          <div class=''>
-        
-                            <div class="input-group date">
-                              <input type="text" class="form-control" name="search_to" id="search_to">
-                              <div class="input-group-addon" id="search_to_icon">
-                                <span class="glyphicon glyphicon-th"></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                </label>
+              </div>
+
+              <div class="form-group row" id="search_attachment_type_container" style="margin-top: 5px;display: none;">
+                <div class='col-md-3 text col-sm-12 hidden-mobile'>
+                  <label class='pull-left'>
+                    حدد إن أردت نوع المرفق
+                  </label>
+                </div>
+                <div class='col-md-6 col-sm-12'>
+                  <select class="search_attachment_type" id="search_attachment_type" name="search_attachment_type"
+                    data-dir="rtl">
+
+                    <option value="all">غير محدد (كل أنواع الملفات)</option>
+                    <option value="pdf">بي دي اف</option>
+                    <option value="word">word</option>
+                    <option value="compressed">ملفات مضغوطة</option>
+                    <option value="image">صور</option>
+                    <option value="video">فيديو</option>
+                    <option value="audio">ملفات صوتية</option>
+                  </select>
                 </div>
               </div>
 
 
+              <div class="form-group search_users">
+                <label>
+                  من العضو
+                </label>
+
+                <select class="js-example-basic-multiple" id="search_msg_user" name="search_msg_user" data-dir="rtl">
+
+                  <option value="0" data-template-result="جميع الأعضاء">
+                    جميع الأعضاء
+                  </option>
+                  <option v-for="item in window.current_user_obj.concat(window.all_users) " :key="item.id"
+                    v-bind:value="item.id">
+                    {{ item.name }}
+                  </option>
+                </select>
+
+
+              </div>
+
+              <div class="form-group" id="search_date_picker_container">
+                <label>
+                  حدد تاريخ إرسال الرسالة:
+                </label>
+
+                <div class='row'>
+                  <div class='col-md-1 text'>
+                    <div class='pull-left '>من</div>
+                  </div>
+                  <div class='col-md-5'>
+
+                    <div class="input-group date">
+                      <input type="text" class="form-control" name="search_from" id="search_from">
+                      <div class="input-group-addon" id="search_from_icon">
+                        <span class="glyphicon glyphicon-th"></span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class='col-md-1 text'>
+                    <div class='pull-left '>إلى</div>
+                  </div>
+                  <div class='col-md-5'>
+
+                    <div class="input-group date">
+                      <input type="text" class="form-control" name="search_to" id="search_to">
+                      <div class="input-group-addon" id="search_to_icon">
+                        <span class="glyphicon glyphicon-th"></span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+
+              </div>
 
 
 
@@ -153,6 +161,10 @@
             <div class="pagination" id="pagination">
             </div>
           </div>
+
+
+
+
           <div id="ResultsModal">
             <div id="no_results" class="hidden well">لا يوجد نتائج لكلمة البحث المدخلة، جرب كلمة أخرى</div>
             <div class="row">
@@ -162,10 +174,13 @@
               </div>
             </div>
           </div>
+
           <div class="total-results hidden margin-auto well" id='total-results2'>
             <div class="pagination" id="pagination2">
             </div>
           </div>
+
+
         </div>
       </div>
     </div>
