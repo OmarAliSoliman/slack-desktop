@@ -279,13 +279,13 @@
 .fixed-date {
   position: fixed;
   top: 10%;
-  left: 53%;
-  transform: translate(-50%, 0);
+  left: 52%;
+  transform: translate(-52%, 0%);
   text-align: center;
   width: auto;
   padding: 3px 20px;
   border-radius: 50px;
-  background-color: #3f0e40;
+  background-color: rgba(63, 14, 64, .8);
   color: #fff;
   height: auto;
   line-height: 30px;
@@ -425,3 +425,4 @@
   border: 0 !important;
   margin: 2px !important;
 }
+

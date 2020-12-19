@@ -47,7 +47,9 @@ $(document).ready(function () {
   //   });
   // });
 
-  if($('.date-divider').length){
+  $('.date-divider').not(".date_divider_template").addClass("slack-date-divider");
+
+  if($('.slack-date-divider').length){
     $('.fixed-date').css('display', 'block');
   }else{
     $('.fixed-date').css('display', 'none');
@@ -63,12 +65,14 @@ $(document).ready(function () {
     // console.log(Math.floor($('.fixed-date').offset().top));
   })
 
-  // console.log($('.date-divider').last().offset().top)
+  console.log($('.slack-date-divider').last().offset().top)
   $(".chat-body").on('scroll',function () {
-    $(".date-divider").map(function (index, item) {
+    $(".slack-date-divider").map(function (index, item) {
       if ($(".fixed-date").offset().top >= $(item).offset().top) {
         $(".fixed-date").text($(item).text());  
       }
     });
   });
+
+
 });
