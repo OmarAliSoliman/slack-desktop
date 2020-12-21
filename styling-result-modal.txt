@@ -1,0 +1,63 @@
+#ResultsModal .search-result-item {
+  font-family: Arial, Helvetica, sans-serif !important;
+  border: 1px solid #dddddd78 !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  padding: 16px 15px 20px !important;
+}
+
+#ResultsModal #search_results li {
+  position: relative !important;
+}
+
+#ResultsModal .search-result-item span.date {
+  position: absolute !important;
+  left: 10px !important;
+}
+
+.msg_meta .meta_replies {
+  font-size: 18px !important;
+}
+
+#ResultsModal #search_results .msg {
+  margin-top: 2px !important;
+  display: inline-block !important;
+  line-height: 25px !important;
+  font-size: 17px !important;
+}
+
+#ResultsModal #search_results .search-result-item .media .media-body .media-heading {
+  color: #1a0dab !important;
+  text-decoration: none !important;
+  font-size: 16px !important;
+}
+
+#ResultsModal #search_results .search-result-item .media .media-body .media-heading .search_row_title {
+  margin-right: 5px !important;
+}
+
+.well {
+  margin-top: 20px;
+}
+#searchMsgsModal .pagination {
+  margin-top: 10px !important;
+}
+
+
+.rtl #pagination > li > a,
+.rtl #pagination > li > span {
+  border: 0 !important;
+  margin: 2px !important;
+}
+
+.rtl #pagination2 > li > a,
+.rtl #pagination2 > li > span {
+  border: 0 !important;
+  margin: 2px !important;
+}
+
+
+.rtl .pagination > li > a,
+.rtl .pagination > li > span {
+  border: 0 !important;
+  margin: 2px !important;
+}

@@ -188,6 +188,7 @@ $(document).ready(function () {
     $('#sidebar').toggleClass('active');
     $("#content").toggleClass('active');
     $("#ChatTextArea").toggleClass('active');
+    $(".fixed-date").toggleClass('fixed-date-position');
   });
 
   $('#mentionSelected').on('change.select2', function() {

@@ -276,21 +276,34 @@
   white-space: normal;
 }
 
+/* .chat-body .well{
+  position: relative;
+  border: 1px solid #000;
+} */
+
+
+
 .fixed-date {
   position: fixed;
   top: 10%;
-  left: 52%;
-  transform: translate(-52%, 0%);
+  left: 430px;
   text-align: center;
   width: auto;
   padding: 3px 20px;
   border-radius: 50px;
-  background-color: rgba(63, 14, 64, .8);
+  background-color: rgba(63, 14, 64, .6);
   color: #fff;
   height: auto;
   line-height: 30px;
   font-size: 12px;
+  transition: all .3s ease-in-out;
 }
+
+.fixed-date-position{
+  left: 150px;
+  transition: all .3s ease-in-out;
+}
+
 /* .fixed-date .divider {
   height: 1px;
   overflow: hidden;
